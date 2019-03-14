@@ -5,10 +5,12 @@ html, body {
   background-position: center;
   box-shadow: inset 2000px 0 0 0 rgba(107, 98, 78, 0.5);
   height: auto;
+  margin-top: 0;
 }
 .cresud-logo img {
   float: right;
   margin-right: 10px;
+  margin-top: 25px;
 }
 .cresud {
   display: block;
@@ -18,7 +20,8 @@ html, body {
   margin-top: 15px;
   margin-left: 10px;
 }
-@media (min-width: 769px) {
+/* large screens */
+@media (min-width: 1024px) {
   .cresud-logo img {
     height: 90px;
   }
@@ -26,12 +29,22 @@ html, body {
     height: 90px;
   }
 }
-@media (max-width: 768px) {
+/* aesthetic purposes only */
+@media (min-width: 1000px) {
+  .button {
+    font-size: 0.95rem !important;
+  }
+  .st-login-title h2 {
+    padding-left: 0px !important;
+  }
+}
+/* medium screens */
+@media (min-width: 640px) {
   .st-ae-logo {
     margin-top: 25px;
   }
   .button {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .st-login-form input[type="submit"] {
     background-color: rgb(12, 29, 25);
@@ -43,23 +56,51 @@ html, body {
     height: 70px;
   }
   .st-login-title h2 {
-    font-size: 1em;
+    font-size: 1.5em;
+    padding-left: 40px;
   }
+  .st-login-social, .st-login-form {
+    width: 33% !important;
+  }
+  .st-login-social {
+    margin-left: 15%;
+  }
+  .st-login-social .social span {
+    top: 12px;
+  }
+  .facebook span, .google-plus span {
+    padding-left: 5px;
+  }
+
 }
-@media (max-width: 420px) {
+/* small screens */
+@media (max-width: 639px) {
   body {
     margin-top: 0;
   }
-   .cresud-logo img {
-    height: 50px;
+  .cresud-logo img {
+    height: 40px;
   }
   .brasilagro-logo img {
     height: 50px;
   }
   .st-login-title h2 {
-    font-size: 1em;
+    font-size: 1.5em;
+    padding-left: inherit;
+  }
+  .st-ae-logo {
+    margin-top: 10px;
   }
   .st-login-form {
     padding-right: 0;
+  }
+  .button {
+    font-size: 1rem;
+  }
+  .st-login-social button {
+    width: 80%;
+  }
+  .facebook span, .google-plus span {
+    padding-left: 5px;
   }
 }
